@@ -18,16 +18,15 @@
     for($i = "!"; $i <"/"; $i++)
     {
         for($k=0; $k < $lenght; $k++){
-            if(strpos($string, $i, $k)){
-                
-                
-                error_reporting(0);
+            
+            if(strpos($name, $i, $k)){
+            $error = "non puoi inserire le lettere speciali";
+             error_reporting(0);
             }
         }
     }
 
     if($error != ""){
-        $error = "non puoi inserire le lettere speciali";
         header("location:survey.php?&error=$error");
     }
 
