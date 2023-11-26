@@ -25,6 +25,18 @@
             }
         }
     }
+    $lenght_surname = strlen($surname);
+    for($i = "!"; $i <"/"; $i++)
+    {
+        for($k=0; $k < $lenght_surname; $k++){
+            
+            if(strpos($surname, $i, $k)){
+            $error = "non puoi inserire le lettere speciali";
+             error_reporting(0);
+            }
+        }
+    }
+
 
     if($error != ""){
         header("location:survey.php?&error=$error");
