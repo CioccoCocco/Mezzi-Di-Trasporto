@@ -45,6 +45,8 @@
     
 
     $myJSON = $myJSON = json_encode($name, $surname, $publicTransport);
+    var_dump($myJSON);
+    file_put_contents('check.json', $myJSON);
 
     
 ?>
