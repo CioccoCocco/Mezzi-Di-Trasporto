@@ -1,3 +1,6 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,14 +8,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accedi</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Benvenuto!</h1>
-    <p>Accedi per iniziare il sondaggio.</p>
-    <form action="controllo_psw.php" method="get">
-        <label for="psw">Inserisci la password: </label>
-        <input type="password" name="psw"><br>
-        <input type="submit" value="INVIA">
-    </form>
+    <div class="homepage">
+        <h1>Benvenuto!</h1>
+        <p>Accedi per iniziare il sondaggio.</p>
+        <form action="checkPassord.php" method="get">
+            <label for="psw">Inserisci la password: </label>
+            <input type="password" name="psw"><br>
+            <input type="submit" value="INVIA">
+        </form>
+    </div>
 </body>
 </html>
