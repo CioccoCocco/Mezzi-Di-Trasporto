@@ -1,4 +1,4 @@
-<?php
+e<?php
     $name = $_POST["name"];
     $surname = $_POST["surname"];
     $publicTransport = $_POST["publicTransport"];
@@ -40,6 +40,8 @@
 
     if($error != ""){
         header("location:survey.php?&error=$error");
+    }else{
+        header("location:results.php?&error=$error");
     }
 
     
