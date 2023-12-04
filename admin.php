@@ -17,6 +17,18 @@
 </head>
 <body>
     <div class="admin">
+        <header id="header">
+
+            <img src="logo.jpg" alt="logo" id="logo">
+
+            <nav>
+                <p>Andrea Marino</p>
+                <p>Aurora Picco</p>
+                <p>Nicolas Natale</p>
+                <p>Gabriele Fazio</p>
+            </nav>
+
+        </header>
         <h1>Benvenuto nella zona dedicata all'admin!</h1>
         <h3>Ecco le persone che hanno votato:</h3>
         <div class="votanti">
