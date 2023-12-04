@@ -1,7 +1,7 @@
 <?php
     $psw = $_GET['password'];
     $psw_correct = false;
-    $login = "declined";
+    $_SESSION['login'] = "declined";
     $lenght = strlen($psw);
     for($i = "!"; $i <"/"; $i++)
     {
@@ -18,14 +18,14 @@
         header("location:index.php?&error=$error");
     }
     if ($psw_correct) {
-        $login = "accept";
+        $_SESSION['login'] = "accept";
         if ($psw === "Survey") {
-            header("location:survey.php?login=$login");
+            header("location:survey.php");
         } else if ($psw === "Admin") {
-            header("location:Admin.php?login=$login");
+            header("location:admin.php");
         }
     }else {
-        header("location:index.php?login=$login");
+        header("location:index.php");
     }
     
     

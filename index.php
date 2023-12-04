@@ -1,4 +1,12 @@
 <?php
+    if(isset($_SESSION['login'])){
+        if ($_SESSION['login'] == "accept") {
+            $_SESSION['login'] = "declined";
+        }
+    }else{
+    session_start();
+    $_SESSION['login'] = "declined";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +36,8 @@
         <p>Accedi per iniziare il sondaggio.</p>
         <form action="checkPassord.php" method="get">
             <label for="psw">Inserisci la password: </label>
+            <!--password per l'admin e' Admin
+                password per il partecipante e' Survey-->
             <input type="password" name="psw"><br>
             <input type="submit" value="INVIA">
         </form>

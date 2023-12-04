@@ -1,4 +1,10 @@
 <?php
+    if(isset($_SESSION['login'])){
+        if ($_SESSION['login'] == "declined") {
+            header("location:index.php");
+        }
+    }
+    
     $name = $_POST["name"];
     $surname = $_POST["surname"];
     $publicTransport = $_POST["publicTransport"];
