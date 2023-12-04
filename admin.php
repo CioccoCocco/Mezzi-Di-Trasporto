@@ -32,8 +32,11 @@
         <h1>Benvenuto nella zona dedicata all'admin!</h1>
         <h3>Ecco le persone che hanno votato:</h3>
         <div class="votanti">
-
+        
         </div>
+        <footer id="footer">
+            <p>Gruppo 3, "Mezzi di trasporto", Novembre 2023</p>
+        </footer>
     </div>
 </body>
 </html>
