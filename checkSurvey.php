@@ -39,6 +39,19 @@ e<?php
 
 
     if($error != ""){
+        
+        //inserimento del JSON
+        $data = [
+        'name' => $name,
+        'surname' => $surname,
+        'publicTransport' => $publicTransport,
+    ];
+    $file = 'check.json';
+    $jsonData = file_get_contents($file);
+    $existingData = json_decode($jsonData, true);
+    $existingData[] = $data;
+    file_put_contents($file, json_encode($existingData));
+        //fine inserimento
         header("location:survey.php?&error=$error");
     }else{
         header("location:results.php?&error=$error");
@@ -46,9 +59,7 @@ e<?php
 
     
 
-    $myJSON = $myJSON = json_encode($name, $surname, $publicTransport);
-    var_dump($myJSON);
-    file_put_contents('check.json', $myJSON);
+   
 
     
 ?>
