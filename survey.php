@@ -16,10 +16,9 @@
     <link type="text/css" rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="survey">
-        <header id="header">
+     <header id="header">
 
-            <img src="logo.jpg" alt="logo" id="logo">
+           <img src="./image/logo.png" alt="logo" id="logo">
 
             <nav>
                 <p>Andrea Marino</p>
@@ -27,8 +26,8 @@
                 <p>Nicolas Natale</p>
                 <p>Gabriele Fazio</p>
             </nav>
-
-        </header>
+    </header>
+    <div class="survey">
         <h1>Sondaggio sui mezzi di trasporto</h1>
 
         <form action="checkSurvey.php" method="get">
@@ -50,9 +49,9 @@
             </select><br>
             <input type="submit" value="INVIA">
         </form>
-        <footer id="footer">
-            <p>Gruppo 3, "Mezzi di trasporto", Novembre 2023</p>
-        </footer>
     </div>
+    <footer id="footer">
+            <p>Gruppo 3, "Mezzi di trasporto", Novembre 2023</p>
+    </footer>
 </body>
 </html>
