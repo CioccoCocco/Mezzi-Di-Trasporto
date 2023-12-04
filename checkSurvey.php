@@ -1,4 +1,4 @@
-e<?php
+<?php
     $name = $_POST["name"];
     $surname = $_POST["surname"];
     $publicTransport = $_POST["publicTransport"];
