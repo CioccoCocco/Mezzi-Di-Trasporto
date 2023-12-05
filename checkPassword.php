@@ -1,5 +1,5 @@
 <?php
-    $psw = $_GET['password'];
+    $psw = $_GET['psw'];
     $_SESSION['login'] = "declined";
     $lenght = strlen($psw);
     for($i = "!"; $i <"/"; $i++)
