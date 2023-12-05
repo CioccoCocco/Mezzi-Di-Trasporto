@@ -47,11 +47,11 @@
     if($error != ""){
         
         //inserimento del JSON
-        $data = [
+        $data = (
         'name' => $name,
         'surname' => $surname,
         'publicTransport' => $publicTransport,
-    ];
+    );
     $file = 'check.json';
     $jsonData = file_get_contents($file);
     $existingData = json_decode($jsonData, true);
