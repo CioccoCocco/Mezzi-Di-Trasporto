@@ -12,14 +12,14 @@
         $error = "";
 
         
-        if(empty($name) /*||  preg_match('/^[A-Za-z ]+$/', $name)*/){
+        if(empty($name) ||  !preg_match('/^[A-Za-z ]+$/', $name)){
             $error = "non ha inserito il nome";
             header("location:survey.php?&error=$error");
-        }else if(empty($surname) /* ||  preg_match('/^[A-Za-z ]+$/', $surname)*/){
+        }else if(empty($surname)||  !preg_match('/^[A-Za-z ]+$/', $name)){
             $error = "non ha inserito il cognome";
             header("location:survey.php?&error=$error");
         }
-    /*
+    /* vecchio metodo per controllare se l'utente non abbia messo caratteri speciali
         $lenght = strlen($name);
         for($i = "!"; $i <"/"; $i++)
         {
@@ -47,6 +47,7 @@
             header("location:survey.php?&error=$error");
             exit();
         }else{
+
             $data = array(
                 'name' => $name,
                 'surname' => $surname,
@@ -54,28 +55,21 @@
             );
 
             $file = 'check.json';
-            $jsonData = file_get_contents($file);
+            $fileAssoluto = realpath($file);
+            $jsonData = file_get_contents($fileAssoluto);
+           
+                
             $existingData = json_decode($jsonData, true);
             
-
-            if ($existingData === null) {
-                // Se il JSON è vuoto o non valido, inizializza l'array
-                $existingData = array();
-            }
-
             $existingData[] = $data;
-            
+
             //array_push($existingData, $data);
             //var_dump($existingData);
-            file_put_contents($file, json_encode($existingData));
+            $tentativo =json_encode($existingData);
+            $results = file_put_contents($fileAssoluto, $tentativo);
             
-            header("location:results.php?&error=$error");
+                header("location:results.php?&error=$error");
             exit();
-        }
-
         
-
-    
-
-        
+    }
     ?>
