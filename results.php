@@ -33,7 +33,7 @@ if (isset($_SESSION['login'])) {
         <h1>Grazie per aver votato!</h1>
         <h3>Ecco i risultati:</h3>
     </div>
-    <?php>
+    <?php
     require_once("phpgraphlib.php");
     $json_data = file_get_contents("check.json");
     $data = json_decode($json_data, true);
