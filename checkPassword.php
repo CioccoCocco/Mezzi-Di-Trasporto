@@ -9,9 +9,8 @@
     } else if ($psw === "Admin") {
         $_SESSION['login'] = "accept";
         header("location:admin.php");
-    }
-    else{
-        header("location:index.php")
+    }else{
+        header("location:index.php");
     }
     
     
