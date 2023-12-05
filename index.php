@@ -34,7 +34,7 @@
     <div class="homepage">
         <h1>Benvenuto!</h1>
         <p>Accedi per iniziare il sondaggio.</p>
-        <form action="checkPassord.php" method="get">
+        <form action="checkPassword.php" method="get">
             <label for="psw">Inserisci la password: </label>
             <!--password per l'admin e' Admin
                 password per il partecipante e' Survey-->
