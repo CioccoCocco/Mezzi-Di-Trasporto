@@ -33,9 +33,22 @@ if (isset($_SESSION['login'])) {
         <h1>Grazie per aver votato!</h1>
         <h3>Ecco i risultati:</h3>
     </div>
+    <?php>
+    require_once("phpgraphlib.php");
+    $json_data = file_get_contents("check.json");
+    $data = json_decode($json_data, true);
+    $graph = new PHPGraphLib(400, 300);
     
-    <form action="grafico.php"></form>
+    $graph->addData($data);
     
+    $graph->setTitle("Preferenze di Mezzi di Trasporto");
+    
+    $graph->setXValuesHorizontal(true);
+    
+    $graph->setYValues(false);
+
+    $graph->createGraph();
+    ?>
     <footer id="footer">
             <p>Gruppo 3, "Mezzi di trasporto", Novembre 2023</p>
     </footer>
