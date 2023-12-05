@@ -30,13 +30,13 @@
     <div class="survey">
         <h1>Sondaggio sui mezzi di trasporto</h1>
 
-        <form action="checkSurvey.php" method="get">
+        <form action="checkSurvey.php" method="post">
             <label for="nome">Inserisci il tuo nome: </label>
-            <input type="text" name="nome"><br>
+            <input type="text" id="name" name="name"><br>
             <label for="cognome">Inserisci il tuo cognome: </label>
-            <input type="text" name="cognome"><br>
+            <input type="text" id="surname" name="surname"><br>
             <label for="mezzo">Scegli dalla lista il mezzo che preferisci maggiormente: </label>
-            <select name="mezzi" id="mezzi">
+            <select name="publicTransport" id="publicTransport">
                 <option value="piedi">Piedi</option>
                 <option value="automobile">Automobile</option>
                 <option value="bicicletta">Bicicletta</option>

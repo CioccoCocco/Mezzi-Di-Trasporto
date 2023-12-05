@@ -18,8 +18,7 @@
         $error = "non ha inserito il cognome";
         header("location:survey.php?&error=$error");
     }
-
-
+/*
     $lenght = strlen($name);
     for($i = "!"; $i <"/"; $i++)
     {
@@ -42,6 +41,7 @@
             }
         }
     }
+*/
 
 
     if($error != ""){
