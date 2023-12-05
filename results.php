@@ -1,12 +1,12 @@
 <?php
-    if(isset($_SESSION['login'])){
-        if ($_SESSION['login'] == "declined") {
-            header("location:index.php");
-        }
+if (isset($_SESSION['login'])) {
+    if ($_SESSION['login'] == "declined") {
+        header("location:index.php");
     }
+}
 
-    $json_data = file_get_contents("check.json");
-    $data = json_decode($json_data, true);
+$json_data = file_get_contents("check.json");
+$data = json_decode($json_data, true);
 ?>
 
 <!DOCTYPE html>
@@ -37,12 +37,12 @@
         <h3>Ecco i risultati:</h3>
     </div>
     
-    <form src="results.php">
+    <form action="results.php">
 <canvas id="myChart" width="400" height="200"></canvas>
 
 <script>
 var data = <?php echo $json_data ; ?>;
-    var dataJson = <?php echo json_encode($data['publicTransport']); ?>;
+    var jsonData = <?php echo json_encode($data['publicTransport']); ?>;
 var ctx = document.getElementById('myChart').getContext('2d');
 
 var myChart = new Chart(ctx, {
