@@ -56,17 +56,18 @@
 
             $file = 'check.json';
             $fileAssoluto = realpath($file);
-            $jsonData = file_get_contents($fileAssoluto);
+            // $jsonData = file_get_contents($fileAssoluto);
            
                 
-            $existingData = json_decode($jsonData, true);
+            // $existingData = json_decode($jsonData, true);
             
-            $existingData[] = $data;
+            // $existingData[] = $data;
 
             //array_push($existingData, $data);
             //var_dump($existingData);
-            $tentativo =json_encode($existingData);
-            $results = file_put_contents($fileAssoluto, $tentativo);
+            // $tentativo =json_encode($existingData);
+            $jsonData = json_encode($data);
+            $results = file_put_contents($fileAssoluto, $tentativo, FILE_APPEND);
             
                 header("location:results.php?&error=$error");
             exit();
