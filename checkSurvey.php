@@ -57,6 +57,7 @@
     $existingData = json_decode($jsonData, true);
     // $existingData[] = $data;
     array_push($existingData, $data);
+    var_dump($existingData);
     file_put_contents($file, json_encode($existingData));
         //fine inserimento
         header("location:survey.php?&error=$error");
