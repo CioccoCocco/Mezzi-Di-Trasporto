@@ -2,6 +2,8 @@ body {
     background-image: url("./image/street.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .homepage, .survey, .results, .admin {
@@ -13,6 +15,7 @@ body {
     margin-top: 18%;
     margin-left: 35%;
     background-color: #FF9801;
+    overflow: auto;
 }
 
 .survey {
@@ -35,7 +38,6 @@ input {
 
 #header {
     border-bottom: 2px solid gray;
-    /* background-color: beige; */
     background-color: #FF9801;
     margin-bottom: 50px;
     position: fixed;
@@ -46,7 +48,7 @@ input {
 }
 
 nav {
-    font-size: 16pt;
+    font-size: 17pt;
     text-transform: uppercase;
     float: right;
     margin-top: 1.5%;
@@ -54,7 +56,6 @@ nav {
 }
 
 nav > p {
-    font-size: 14pt;
     text-decoration: none;
     margin-left: 20px;
     margin-right: 20px;
@@ -80,13 +81,27 @@ nav > p:hover {
     margin-left: 50%;
 }
 
+@media only screen and (max-width: 960px) {
+    nav {
+        float: left;
+    }
+    
+    #logo {
+        margin-right: 100%;
+        transition: 7s ease-in-out;
+    }
+
+    #logo:hover {
+        margin-left: 85%;
+    }
+}
+
 #footer {
     position: fixed;
     width: 100%;
     bottom: 0;
     left: 0;
     z-index: 100;
-    /* background-color: beige; */
     background-color: #FF9801;
     border-top: 1px solid black;
 }
