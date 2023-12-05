@@ -39,7 +39,7 @@
             <!--password per l'admin e' Admin
                 password per il partecipante e' Survey-->
             <input type="password" name="psw"><br>
-            <input type="submit" value="INVIA">
+            <input type="submit" id="submit" value="INVIA">
         </form>
     </div>
     <footer id="footer">

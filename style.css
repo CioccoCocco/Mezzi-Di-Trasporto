@@ -36,6 +36,15 @@ input {
     margin: 5px;
 }
 
+#submit {
+    transition: 0.5s ease-in-out;
+}
+
+#submit:hover {
+    /* transition: 0.5s ease-in-out; */
+    border-radius: 15px;
+}
+
 #header {
     border-bottom: 2px solid gray;
     background-color: #FF9801;
@@ -78,7 +87,7 @@ nav > p:hover {
 }
 
 #logo:hover {
-    margin-left: 50%;
+    margin-left: 45%;
 }
 
 @media only screen and (max-width: 960px) {
