@@ -35,6 +35,8 @@
     </div>
     
 //ho aggiunto il js per il grafico
+<canvas id="myChart" width="400" height="200"></canvas>
+
 <script>
 var data = <?php echo $data_json; ?>;
     var dataJson = <?php echo json_encode($data['publicTransport']); ?>;
