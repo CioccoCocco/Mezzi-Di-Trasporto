@@ -4,6 +4,10 @@
             header("location:index.php");
         }
     }
+
+         require_once("phpgraphlib.php");
+    $json_data = file_get_contents("check.json");
+    $data = json_decode($json_data, true);
 ?>
 
 <!DOCTYPE html>
@@ -35,6 +39,7 @@
     </div>
     
 //ho aggiunto il js per il grafico
+    <form src="results.php">
 <canvas id="myChart" width="400" height="200"></canvas>
 
 <script>
@@ -63,6 +68,7 @@ var myChart = new Chart(ctx, {
     }
 });
 </script>
+         </form>
     
     <footer id="footer">
             <p>Gruppo 3, "Mezzi di trasporto", Novembre 2023</p>
