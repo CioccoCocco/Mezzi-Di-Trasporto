@@ -14,6 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Risultati</title>
     <link type="text/css" rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
 </head>
 <body>
     <header id="header">
@@ -31,6 +33,35 @@
         <h1>Grazie per aver votato!</h1>
         <h3>Ecco i risultati:</h3>
     </div>
+    
+//ho aggiunto il js per il grafico
+<script>
+var data = <?php echo $data_json; ?>;
+    var dataJson = <?php echo json_encode($data['publicTransport']); ?>;
+var ctx = document.getElementById('myChart').getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: dataJson,
+        datasets: [{
+            label: 'Grafico a Barre',
+            data: data,
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+    
     <footer id="footer">
             <p>Gruppo 3, "Mezzi di trasporto", Novembre 2023</p>
     </footer>
