@@ -4,9 +4,6 @@ if (isset($_SESSION['login'])) {
         header("location:index.php");
     }
 }
-
-$json_data = file_get_contents("check.json");
-$data = json_decode($json_data, true);
 ?>
 
 <!DOCTYPE html>
@@ -37,36 +34,7 @@ $data = json_decode($json_data, true);
         <h3>Ecco i risultati:</h3>
     </div>
     
-    <form action="results.php">
-<canvas id="myChart" width="400" height="200"></canvas>
-
-<script>
-var data = <?php echo $json_data ; ?>;
-    var jsonData = <?php echo json_encode($data['publicTransport']); ?>;
-var ctx = document.getElementById('myChart').getContext('2d');
-
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: dataJson,
-        datasets: [{
-            label: 'Grafico a Barre',
-            data: data,
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-</script>
-         </form>
+    <form action="grafico.php"></form>
     
     <footer id="footer">
             <p>Gruppo 3, "Mezzi di trasporto", Novembre 2023</p>
