@@ -38,7 +38,7 @@
         <h3>Ecco i risultati:</h3>
     </div>
     
-//ho aggiunto il js per il grafico
+//ho aggiunto il js per il grafico per farlo funzionare si deve scaricare chart.js con il commando npm install chart.js
     <form src="results.php">
 <canvas id="myChart" width="400" height="200"></canvas>
 
