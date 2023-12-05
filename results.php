@@ -42,7 +42,7 @@
 <canvas id="myChart" width="400" height="200"></canvas>
 
 <script>
-var data = <?php echo json_data ; ?>;
+var data = <?php echo $json_data ; ?>;
     var dataJson = <?php echo json_encode($data['publicTransport']); ?>;
 var ctx = document.getElementById('myChart').getContext('2d');
 
