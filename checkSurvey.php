@@ -47,7 +47,7 @@
     if($error != ""){
         
         //inserimento del JSON
-        $data = (
+        $data = array(
         'name' => $name,
         'surname' => $surname,
         'publicTransport' => $publicTransport,
