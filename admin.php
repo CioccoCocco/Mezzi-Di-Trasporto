@@ -4,6 +4,12 @@
             header("location:index.php");
         }
     }
+
+    require_once("phpgraphlib.php");
+    $json_data = file_get_contents("check.json");
+    $data = json_decode($json_data, true);
+
+    print_r($data)
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +38,7 @@
         <h1>Benvenuto nella zona dedicata all'admin!</h1>
         <h3>Ecco le persone che hanno votato:</h3>
         <div class="votanti">
-        
+            <form action="admin.php" ></form>
         </div>
     </div>
     <footer id="footer">
