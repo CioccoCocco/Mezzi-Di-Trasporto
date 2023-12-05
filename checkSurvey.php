@@ -67,7 +67,7 @@
             //var_dump($existingData);
             // $tentativo =json_encode($existingData);
             $jsonData = json_encode($data);
-            $results = file_put_contents($fileAssoluto, $tentativo, FILE_APPEND);
+            $results = file_put_contents($fileAssoluto, $jsonData, FILE_APPEND);
             
                 header("location:results.php?&error=$error");
             exit();
