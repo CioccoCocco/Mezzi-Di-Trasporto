@@ -55,7 +55,8 @@
     $file = 'check.json';
     $jsonData = file_get_contents($file);
     $existingData = json_decode($jsonData, true);
-    $existingData[] = $data;
+    // $existingData[] = $data;
+    array_push($existingData, $data);
     file_put_contents($file, json_encode($existingData));
         //fine inserimento
         header("location:survey.php?&error=$error");
