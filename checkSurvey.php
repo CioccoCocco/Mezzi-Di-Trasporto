@@ -2,6 +2,7 @@
     if(isset($_SESSION['login'])){
         if ($_SESSION['login'] == "declined") {
             header("location:index.php");
+            exit();
         }
     }
     
@@ -61,8 +62,10 @@
     file_put_contents($file, json_encode($existingData));
         //fine inserimento
         header("location:survey.php?&error=$error");
+        exit();
     }else{
         header("location:results.php?&error=$error");
+        exit();
     }
 
     
