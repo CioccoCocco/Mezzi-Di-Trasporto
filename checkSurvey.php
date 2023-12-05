@@ -59,7 +59,11 @@
     $existingData[] = $data;
     //array_push($existingData, $data);
     //var_dump($existingData);
-    file_put_contents($file, json_encode($existingData, JSON_PRETTY_PRINT));
+    $result = file_put_contents($file, json_encode($existingData, JSON_PRETTY_PRINT));
+
+    if ($result === false) {
+        die('Si è verificato un errore durante la scrittura nel file JSON.');
+    }
         //fine inserimento
         header("location:survey.php?&error=$error");
         exit();
